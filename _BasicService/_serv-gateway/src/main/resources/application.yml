@@ -1,0 +1,54 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: api-gateway
+     
+service:
+  protocol: http
+
+ 
+#zuul:
+#  routes:
+#    book-service:
+#      path: /business-service/**
+#      sensitive-headers: Set-Cookie,Authorization
+#hystrix:
+#  command:
+#    book-service:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 600000
+ 
+#zuul:
+#  routes:
+#    rating-service:
+#      path: /rating-service/**
+#      sensitive-headers: Set-Cookie,Authorization
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 600000
+ 
+#zuul:
+#  routes:
+#    discovery:
+#      path: /discovery/**
+#      sensitive-headers: Set-Cookie,Authorization
+#      url: http://localhost:8082
+#hystrix:
+#  command:
+#    discovery:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 600000
+
+    
+eureka:
+  client:
+    serviceUrl:
+     #defaultZone: http://localhost:8888/eureka/
+     defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8888}/eureka/
