@@ -7,15 +7,11 @@
 <h:head>
 </h:head>
 <body>
-	
-	<ui:insert name="header" >
-		  <ui:include src="../pages/templates/header.xhtml" />
-		</ui:insert>
-		
-		<h1>#{jsfBean.welcomeMessage}</h1>
-		
-		<ui:insert name="footer" >
-		  <ui:include src="../pages/templates/footer.xhtml" />
-		</ui:insert>
+
+	<ui:composition>
+		<form action="/logout" method="post">
+			<input type="submit" value="Sign Out" />
+		</form>
+	</ui:composition>
 </body>
 </html>
