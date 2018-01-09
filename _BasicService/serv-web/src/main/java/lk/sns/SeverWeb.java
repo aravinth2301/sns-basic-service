@@ -8,15 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @SpringBootApplication
 @Controller
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 public class SeverWeb {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SeverWeb.class, args);
 	}
-	
-	 @RequestMapping("/*")
-	    public String index() {
-	        return "index.jsf";
-	    }
+
+	@RequestMapping("/login")
+	public String login() {
+		return "login.jsf";
+	}
+
+	@RequestMapping("/pages/index")
+	public String index() {
+		return "index.jsf";
+	}
 }
