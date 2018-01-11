@@ -9,7 +9,7 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 public class JsfBean {
 
-	private String welcomeMessage = "Populated by JSF created bean1we ";
+	private String welcomeMessage = "Populated by JSF ";
 
 	public String getWelcomeMessage() {
 		return welcomeMessage + new Date();

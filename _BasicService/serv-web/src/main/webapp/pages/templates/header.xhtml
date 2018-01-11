@@ -8,9 +8,13 @@
 </h:head>
 <body>
 
+
 	<ui:composition>
 		<form action="/logout" method="post">
-			<input type="submit" value="Sign Out" />
+			<button type="submit"
+				style="position: fixed; right: 10px; top: 5px; background-color: Transparent; border: none; cursor: pointer; overflow: hidden; background-repeat: no-repeat; outline: none;z-index:99;">
+				<i class="fa fa-sign-out fa-4x" aria-hidden="true"></i>
+			</button>
 		</form>
 	</ui:composition>
 </body>

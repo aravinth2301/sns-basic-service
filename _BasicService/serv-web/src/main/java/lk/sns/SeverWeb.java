@@ -17,7 +17,7 @@ public class SeverWeb {
 
 	@RequestMapping("/login")
 	public String login() {
-		return "login.jsf";
+		return "login2.jsf";
 	}
 
 	@RequestMapping("/pages/index")
